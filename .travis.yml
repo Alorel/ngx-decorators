@@ -4,7 +4,7 @@ sudo: false
 
 env:
   global:
-  - TS_NODE_CACHE_DIRECTORY=/dev/null
+  - TS_NODE_CACHE_DIRECTORY=./node_modules/.cache/ts-node
 
 before_install:
 - npm i -g greenkeeper-lockfile
