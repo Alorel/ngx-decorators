@@ -4,8 +4,13 @@
   "description": "Useful decorators for Angular 2 and above",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:cjs && concurrently \"npm run build:esm2015\" \"npm run build:esm5\"",
+    "build:cjs": "tsc -p ./tsconfig-cjs.json",
+    "prebuild:cjs": "rimraf dist",
     "build:esm2015": "tsc -p ./tsconfig-esm2015.json",
     "prebuild:esm2015": "rimraf dist/esm2015",
+    "build:esm5": "tsc -p ./tsconfig-esm5.json",
+    "prebuild:esm5": "rimraf dist/esm5",
     "pretest": "rimraf coverage",
     "test": "nyc mocha --opts ./mocha.opts",
     "test:watch": "npm run test -- --watch",
