@@ -1,0 +1,9 @@
+language: node_js
+node_js: lts/*
+install: npm install
+script: echo todo
+
+before_cache: rm -rf ./node_modules/.cache
+cache:
+  directories:
+  - node_modules
