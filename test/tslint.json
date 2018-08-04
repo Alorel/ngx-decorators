@@ -1,0 +1,9 @@
+{
+  "extends": "../tslint.json",
+  "rules": {
+    "import-blacklist": false,
+    "max-classes-per-file": false,
+    "no-unused-expression": false,
+    "no-magic-numbers": false
+  }
+}

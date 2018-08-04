@@ -1,0 +1,6 @@
+{
+  "extends": "@alorel-personal/tslint-rules",
+  "rules": {
+    "no-invalid-this": false
+  }
+}

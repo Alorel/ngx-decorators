@@ -1,7 +1,19 @@
 language: node_js
 node_js: lts/*
+sudo: false
+
+env:
+  global:
+  - TS_NODE_CACHE_DIRECTORY=/dev/null
+
+before_install:
+- npm i -g greenkeeper-lockfile
+- greenkeeper-lockfile-update
+
 install: npm install
-script: echo todo
+
+after_script: if [[ $GH_TOKEN ]]; then greenkeeper-lockfile-upload; fi;
+after_success: cat ./coverage/lcov.info | coveralls
 
 before_cache: rm -rf ./node_modules/.cache
 cache:

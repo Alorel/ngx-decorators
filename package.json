@@ -4,7 +4,15 @@
   "description": "Useful decorators for Angular 2 and above",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:esm2015": "tsc -p ./tsconfig-esm2015.json",
+    "prebuild:esm2015": "rimraf dist/esm2015",
+    "pretest": "rimraf coverage",
+    "test": "nyc mocha --opts ./mocha.opts",
+    "test:watch": "npm run test -- --watch",
+    "tslint": "tslint -s ./node_modules/custom-tslint-formatters/formatters -t grouped -p .",
+    "tslint:fix": "npm run tslint -- --fix",
+    "typecheck": "tsc --noEmit -p ./tsconfig-esm2015.json",
+    "typecheck:watch": "npm run typecheck -- --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +23,27 @@
   "bugs": {
     "url": "https://github.com/Alorel/ngx-decorators/issues"
   },
-  "homepage": "https://github.com/Alorel/ngx-decorators#readme"
+  "homepage": "https://github.com/Alorel/ngx-decorators#readme",
+  "devDependencies": {
+    "@alorel-personal/tslint-rules": "^1.1.0",
+    "@types/chai": "^4.1.4",
+    "@types/lodash": "^4.14.116",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "concurrently": "^3.6.1",
+    "coveralls": "^3.0.2",
+    "custom-tslint-formatters": "^2.4.0",
+    "lodash": "^4.17.10",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.6",
+    "ts-node": "^7.0.0",
+    "tslib": "^1.9.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1",
+    "typescript-proto-decorator": "^2.0.1",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0"
+  }
 }
