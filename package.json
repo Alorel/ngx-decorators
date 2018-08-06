@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/Alorel/ngx-decorators#readme",
   "devDependencies": {
-    "@alorel-personal/tslint-rules": "^1.1.0",
+    "@alorel-personal/tslint-rules": "1.1.0",
     "@types/chai": "^4.1.4",
     "@types/mocha": "^5.2.5",
     "chai": "^4.1.2",
