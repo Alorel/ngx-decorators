@@ -1,6 +1,7 @@
 {
   "extends": "@alorel-personal/tslint-rules",
   "rules": {
-    "no-invalid-this": false
+    "no-invalid-this": false,
+    "no-unbound-method": false
   }
 }

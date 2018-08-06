@@ -1,5 +1,5 @@
-import {ConfEnum} from './interfaces/ConfEnum';
-import {MockCdr} from './interfaces/MockCdr';
+import {ConfEnum} from './lib/ConfEnum';
+import {MockCdr} from './lib/Mocks';
 
 export interface CdrPropConfig {
   /** Default value to set on the prototype */
@@ -16,7 +16,7 @@ export interface CdrPropConfig {
  * @param conf Optional configuration
  */
 export function CdrProp(propName: string, conf: CdrPropConfig = {}): PropertyDecorator {
-  return function CdrProp(target: any, key: PropertyKey): void {
+  return (target: any, key: PropertyKey): void => {
     const sym: unique symbol = Symbol(`value:${key.toString()}`);
     const defaultDescriptor: PropertyDescriptor = {
       configurable: true,
