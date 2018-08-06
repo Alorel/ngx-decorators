@@ -56,5 +56,8 @@
     "typescript-proto-decorator": "^2.0.1",
     "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0"
+  },
+  "peerDependencies": {
+    "tslib": "^1.6.0"
   }
 }
