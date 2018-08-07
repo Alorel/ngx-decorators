@@ -1,17 +1,5 @@
+import {ensureSymbol} from './lib/ensureSymbol';
 import {_unsubscribe} from './lib/symbols';
-
-function ensureSymbol(target: any, symbol: symbol): PropertyKey[] {
-  if (!target[symbol]) {
-    Object.defineProperty(target, symbol, {
-      configurable: false,
-      enumerable: false,
-      value: [],
-      writable: false
-    });
-  }
-
-  return target[symbol];
-}
 
 /**
  * Automatically unsubscribe from the subscription(s) present at this property.
@@ -19,6 +7,6 @@ function ensureSymbol(target: any, symbol: symbol): PropertyKey[] {
  */
 export function Unsubscribe(): PropertyDecorator {
   return (target: any, prop: PropertyKey): void => {
-    ensureSymbol(target, _unsubscribe).push(prop);
+    ensureSymbol(target, _unsubscribe, []).push(prop);
   };
 }
