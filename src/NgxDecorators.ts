@@ -1,4 +1,5 @@
 import {MockDestroyable} from './lib/Mocks';
+import {complete} from './processors/complete';
 import {unsubscribe} from './processors/unsubscribe';
 
 /** Apply all the decorators that tap into Angular's lifecycle hooks */
@@ -14,6 +15,7 @@ export function NgxDecorators(): ClassDecorator {
         }
       } finally {
         unsubscribe(this);
+        complete(this);
       }
     };
   };

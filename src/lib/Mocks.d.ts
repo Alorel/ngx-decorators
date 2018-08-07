@@ -9,6 +9,11 @@ export interface MockUnsubscribable {
 }
 
 /** @internal */
+export interface MockCompletable {
+  complete(): void;
+}
+
+/** @internal */
 export interface MockDestroyable {
   ngOnDestroy(): void;
 }
