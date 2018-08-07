@@ -17,7 +17,7 @@ export interface CdrPropConfig {
  * @param propName Property at which the change detector can be found
  * @param conf Optional configuration
  */
-export function CdrProp(propName: string, conf: CdrPropConfig = {}): PropertyDecorator {
+export function CdrProp(propName: PropertyKey, conf: CdrPropConfig = {}): PropertyDecorator {
   return (target: any, key: PropertyKey): void => {
     const sym: unique symbol = Symbol(`value:${key.toString()}`);
     const defaultDescriptor: PropertyDescriptor = {
