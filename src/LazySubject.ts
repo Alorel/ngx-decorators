@@ -13,7 +13,7 @@ export function LazySubject(): MethodDecorator {
       throw new Error('LazySubject can only decorate getters');
     }
 
-    desc.get = function () {
+    desc.get = function() {
       const value = orig.apply(this, arguments);
 
       Object.defineProperty(this, key, {

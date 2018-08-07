@@ -6,3 +6,6 @@ export const _complete: unique symbol = Symbol('complete');
 
 /** @internal */
 export const _lazySubj: unique symbol = Symbol('lazySubj');
+
+/** @internal */
+export const _destroyed: unique symbol = Symbol('destroyed');

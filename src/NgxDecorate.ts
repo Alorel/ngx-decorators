@@ -1,5 +1,6 @@
 import {MockDestroyable} from './lib/Mocks';
 import {complete} from './processors/complete';
+import {destroyed} from './processors/destroyed';
 import {lazySubj} from './processors/lazy-subject';
 import {unsubscribe} from './processors/unsubscribe';
 
@@ -15,6 +16,7 @@ export function NgxDecorate(): ClassDecorator {
           original.apply(this, arguments);
         }
       } finally {
+        destroyed(this);
         unsubscribe(this);
         complete(this);
         lazySubj(this);
