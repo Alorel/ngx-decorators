@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {Complete, NgxDecorators} from '../src';
+import {Complete, NgxDecorate} from '../src';
 import {MockCompletable, MockDestroyable} from '../src/lib/Mocks';
 
 interface Completable extends MockCompletable {
@@ -21,7 +21,7 @@ describe('Complete', () => {
   }
 
   it('Should be a noop on undefined', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C implements Mock {
       @Complete()
       public subj: Completable;
@@ -36,7 +36,7 @@ describe('Complete', () => {
   });
 
   it('Should be a noop on undefined (array)', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C implements Mock {
       @Complete()
       public subj: Completable;
@@ -51,7 +51,7 @@ describe('Complete', () => {
   });
 
   it('Should complete (1)', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
       @Complete()
       public sub: Completable = mkCompletable();
@@ -63,7 +63,7 @@ describe('Complete', () => {
   });
 
   it('Should complete (array)', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
       public sub: Completable;
       // noinspection JSMismatchedCollectionQueryUpdate
@@ -89,7 +89,7 @@ describe('Complete', () => {
   });
 
   it('Should complete multiple singles', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
       @Complete()
       public sub: Completable = mkCompletable();
@@ -103,7 +103,7 @@ describe('Complete', () => {
   });
 
   it('Should complete (multi-array)', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
       public sub: Completable;
       @Complete()

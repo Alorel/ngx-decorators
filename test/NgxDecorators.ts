@@ -1,9 +1,9 @@
 import {expect} from 'chai';
-import {NgxDecorators} from '../src';
+import {NgxDecorate} from '../src';
 
-describe('NgxDecorators', () => {
+describe('NgxDecorate', () => {
   it('Should define a ngOnDestroy', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
     }
 
@@ -11,7 +11,7 @@ describe('NgxDecorators', () => {
   });
 
   it('Should call existing ngOnDestroy', () => {
-    @NgxDecorators()
+    @NgxDecorate()
     class C {
       public calls = 0;
 
@@ -34,7 +34,7 @@ describe('NgxDecorators', () => {
       }
     }
 
-    @NgxDecorators()
+    @NgxDecorate()
     class C2 extends C1 {
     }
 
@@ -52,7 +52,7 @@ describe('NgxDecorators', () => {
       }
     }
 
-    @NgxDecorators()
+    @NgxDecorate()
     class C2 extends C1 {
 
       public ngOnDestroy() {

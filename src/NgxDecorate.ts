@@ -4,7 +4,7 @@ import {lazySubj} from './processors/lazy-subject';
 import {unsubscribe} from './processors/unsubscribe';
 
 /** Apply all the decorators that tap into Angular's lifecycle hooks */
-export function NgxDecorators(): ClassDecorator {
+export function NgxDecorate(): ClassDecorator {
   return (target: any): void => {
     const proto: MockDestroyable = target.prototype;
     const original = proto.ngOnDestroy;

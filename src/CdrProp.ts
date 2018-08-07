@@ -12,7 +12,7 @@ export interface CdrPropConfig {
 
 /**
  * Call .detectChanges() on the change detector ref whenever this property is written to.
- * This decorator does <b>not</b> require the class to be decorated with {@link NgxDecorators}
+ * This decorator does <b>not</b> require the class to be decorated with {@link NgxDecorate}
  *
  * @param propName Property at which the change detector can be found
  * @param conf Optional configuration
