@@ -1,0 +1,13 @@
+/.idea/
+/node_modules/
+/src/
+/.nyc_output/
+/coverage/
+/.nycrc
+/.travis.yml
+/mocha.opts
+/tsconfig*.json
+/webpack.config.js
+**/tslint.json
+/test/
+*.tgz
