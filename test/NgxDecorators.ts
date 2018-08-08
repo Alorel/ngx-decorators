@@ -25,6 +25,21 @@ describe('NgxDecorate', () => {
     expect(c.calls).to.eq(1);
   });
 
+  it('Should call existing ngOnInit', () => {
+    @NgxDecorate()
+    class C {
+      public calls = 0;
+
+      public ngOnInit() {
+        this.calls++;
+      }
+    }
+
+    const c = new C();
+    c.ngOnInit();
+    expect(c.calls).to.eq(1);
+  });
+
   it('Should call super ngOnDestroy', () => {
     class C1 {
       public c1Calls = 0;

@@ -17,3 +17,13 @@ export interface MockCompletable {
 export interface MockDestroyable {
   ngOnDestroy(): void;
 }
+
+/** @internal */
+export interface MockInitable {
+  ngOnInit(): void;
+}
+
+/** @internal */
+export interface MockSubject<T = any> extends MockUnsubscribable {
+  next(v: T): void;
+}

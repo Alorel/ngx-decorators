@@ -9,3 +9,6 @@ export const _lazySubj: unique symbol = Symbol('lazySubj');
 
 /** @internal */
 export const _destroyed: unique symbol = Symbol('destroyed');
+
+/** @internal */
+export const _setProp: unique symbol = Symbol('setProp');
