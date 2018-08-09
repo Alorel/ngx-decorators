@@ -1,3 +1,15 @@
+## [1.0.3](https://github.com/Alorel/ngx-decorators/compare/1.0.2...1.0.3) (2018-08-09)
+
+
+### Bug Fixes
+
+* **CI:** GH-pages release script ([cdc6f8a](https://github.com/Alorel/ngx-decorators/commit/cdc6f8a))
+
+
+### Build System
+
+* Remove docs dir before tsdoc ([64d77dc](https://github.com/Alorel/ngx-decorators/commit/64d77dc))
+
 ## [1.0.2](https://github.com/Alorel/ngx-decorators/compare/1.0.1...1.0.2) (2018-08-09)
 
 
