@@ -3,4 +3,4 @@
 /dist/
 /.nyc_output/
 /coverage/
-*.tgz
+*.tgz/git_gpg_keys.asc

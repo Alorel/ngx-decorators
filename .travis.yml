@@ -2,20 +2,41 @@ language: node_js
 node_js: lts/*
 sudo: false
 
-env:
-  global:
-  - TS_NODE_CACHE_DIRECTORY=./node_modules/.cache/ts-node
-
 before_install:
-- npm i -g greenkeeper-lockfile
+- npm i -g greenkeeper-lockfile yarn
+- &prepKey if [[ $GH_TOKEN ]]; then ./prepare-gpg-key.sh; fi;
 - greenkeeper-lockfile-update
 
-install: npm install
+install: yarn install --check-files
+
+script:
+- yarn run tslint
+- yarn run typecheck
+- yarn run test --forbid-only --forbid-pending
+
+after_success: cat ./coverage/lcov.info | coveralls
 
 after_script: if [[ $GH_TOKEN ]]; then greenkeeper-lockfile-upload; fi;
-after_success: cat ./coverage/lcov.info | coveralls
 
 before_cache: rm -rf ./node_modules/.cache
 cache:
+  yarn: true
   directories:
   - node_modules
+
+stages:
+- Test
+- Release
+
+jobs:
+  include:
+  - stage: Deploy
+    if: branch=master
+    before_install:
+    - npm i -g yarn
+    - *prepKey
+    before_script:
+    - yarn run build
+    script: semantic-release
+    after_success: []
+    after_script: []
