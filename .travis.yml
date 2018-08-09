@@ -38,6 +38,15 @@ jobs:
     - *prepKey
     before_script:
     - yarn run build
+    - yarn run doctoc
     script: semantic-release
     after_success: []
     after_script: []
+    before_deploy:
+    - yarn run tsdoc
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      github-token: $GH_TOKEN
+      on:
+        branch: master

@@ -1,12 +1,5 @@
-const Bluebird = require('bluebird');
-global.Promise = Bluebird;
-const glob = Bluebird.promisify(require('glob'));
+const {glob, globOpts} = require('./common');
 const fs = require('fs-extra');
-
-const globOpts = {
-  absolute: true,
-  cwd: require('path').join(__dirname, '..')
-};
 
 glob('dist/**/*.d.ts', globOpts)
   .filter(filePath => {
