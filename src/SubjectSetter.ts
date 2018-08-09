@@ -12,6 +12,11 @@ export interface SubjectSetterConfig {
 
 /**
  * Mark the property as a subject setter. When written to, it will call .next(value) on the subject.
+ * The decorator's <b>default</b> config option only works on items that make use of the OnInit hook,
+ * i.e. it will <b>not</b> work for services and pipes.
+ *
+ * Because the <b>default</b> config option utilises the OnInit hook, it should not be used on
+ * properties that are component inputs as the input would get overridden during the hook.
  *
  * @param subjectPropName Name of the property at which the subject resides
  * @param conf Optional configuration
