@@ -13,3 +13,5 @@
 *.tgz
 /git_gpg_keys.asc
 /git_gpg_keys.asc.enc
+/docs/
+/build/
