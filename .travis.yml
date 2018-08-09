@@ -31,6 +31,7 @@ stages:
 
 jobs:
   include:
+  - stage: Test
   - stage: Release
     before_install:
     - npm i -g yarn
