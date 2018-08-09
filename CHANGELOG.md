@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Alorel/ngx-decorators/compare/1.0.4...1.0.5) (2018-08-09)
+
+
+### Bug Fixes
+
+* **CI:** Add on:tags:true to travis deploy ([9ca84c6](https://github.com/Alorel/ngx-decorators/commit/9ca84c6))
+
 ## [1.0.4](https://github.com/Alorel/ngx-decorators/compare/1.0.3...1.0.4) (2018-08-09)
 
 
