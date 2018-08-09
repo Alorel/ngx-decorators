@@ -31,7 +31,7 @@ stages:
 
 jobs:
   include:
-  - stage: Deploy
+  - stage: Release
     before_install:
     - npm i -g yarn
     - *prepKey
