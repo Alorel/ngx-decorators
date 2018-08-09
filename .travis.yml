@@ -46,6 +46,8 @@ jobs:
     - yarn run tsdoc
     deploy:
       provider: pages
+      local-dir: docs
+      committer-from-gh: true
       skip_cleanup: true
       github-token: $GH_TOKEN
       on:
