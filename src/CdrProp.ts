@@ -6,7 +6,10 @@ export interface CdrPropConfig {
   default?: any;
   /** Partial property descriptor */
   desc?: ConfEnum;
-  /** Key of a property used for tracking whether the component's been destroyed */
+  /**
+   * Key of a property used for tracking whether the component's been destroyed
+   * to prevent errors caused by triggering change detection on a destroyed component.
+   */
   destroyed?: PropertyKey;
 }
 
