@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Alorel/ngx-decorators/compare/1.0.3...1.0.4) (2018-08-09)
+
+
+### Bug Fixes
+
+* **CI:** Add all_branches to deploy config ([334ef23](https://github.com/Alorel/ngx-decorators/commit/334ef23))
+
 ## [1.0.3](https://github.com/Alorel/ngx-decorators/compare/1.0.2...1.0.3) (2018-08-09)
 
 
