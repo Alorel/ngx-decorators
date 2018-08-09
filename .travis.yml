@@ -26,29 +26,32 @@ cache:
 
 stages:
 - Test
-- name: Release
-  if: branch = master AND type = push
+- Release
 
 jobs:
   include:
   - stage: Test
   - stage: Release
-    before_install:
+    if: branch = master AND type = push
+    before_install: &bfiRelease
     - npm i -g yarn
     - *prepKey
-    before_script:
+    before_script: &bfsRelease
     - yarn run build
     - yarn run doctoc
     script: semantic-release
     after_success: []
     after_script: []
-    before_deploy:
-    - yarn run tsdoc
+  - stage: Release
+    if: tag IS present
+    before_install: *bfiRelease
+    before_script: *bfsRelease
+    script: yarn run tsdoc
+    after_success: []
+    after_script: []
     deploy:
       provider: pages
       local-dir: docs
       committer-from-gh: true
       skip_cleanup: true
       github-token: $GH_TOKEN
-      on:
-        tags: true
