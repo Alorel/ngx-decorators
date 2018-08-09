@@ -50,6 +50,7 @@ jobs:
     after_success: []
     after_script: []
     deploy:
+      all_branches: true
       provider: pages
       local-dir: docs
       committer-from-gh: true
