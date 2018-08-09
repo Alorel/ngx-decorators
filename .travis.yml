@@ -26,12 +26,12 @@ cache:
 
 stages:
 - Test
-- Release
+- name: Release
+  if: branch = master AND type = push
 
 jobs:
   include:
   - stage: Deploy
-    if: branch=master
     before_install:
     - npm i -g yarn
     - *prepKey
