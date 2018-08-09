@@ -1,12 +1,14 @@
 import {MockUnsubscribable} from '../lib/Mocks';
 import {_unsubscribe} from '../lib/symbols';
 
+/** @internal */
 function completeArray(props: MockUnsubscribable[]): void {
   for (const sub of props) {
     sub.unsubscribe();
   }
 }
 
+/** @internal */
 function processProp(prop: MockUnsubscribable | MockUnsubscribable[]): void {
   if (prop) {
     if (Array.isArray(prop)) {
