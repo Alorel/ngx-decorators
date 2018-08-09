@@ -6,6 +6,7 @@ import {lazySubj} from './processors/lazy-subject';
 import {setProp} from './processors/setProp';
 import {unsubscribe} from './processors/unsubscribe';
 
+/** @internal */
 function applyOnInit(proto: MockInitable): void {
   const orig = proto.ngOnInit || noop;
 
@@ -18,6 +19,7 @@ function applyOnInit(proto: MockInitable): void {
   };
 }
 
+/** @internal */
 function applyOnDestroy(proto: MockDestroyable): void {
   const orig = proto.ngOnDestroy || noop;
 
