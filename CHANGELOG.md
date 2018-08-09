@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/Alorel/ngx-decorators/compare/1.0.0...1.0.1) (2018-08-09)
+
+
+### Bug Fixes
+
+* **CI:** Github pages release config ([a1c91f8](https://github.com/Alorel/ngx-decorators/commit/a1c91f8))
+
+
+### Maintenance
+
+* **package:** Update [@alorel-personal](https://github.com/alorel-personal)/semantic-release ([5d5b0f8](https://github.com/Alorel/ngx-decorators/commit/5d5b0f8))
+
 # 1.0.0 (2018-08-09)
 
 
