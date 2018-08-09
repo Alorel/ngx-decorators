@@ -27,6 +27,7 @@
     "typecheck": "tsc --noEmit -p ./tsconfig-esm2015.json",
     "typecheck:watch": "npm run typecheck -- --watch",
     "doctoc": "doctoc README.md --github",
+    "pretsdoc": "rimraf docs",
     "tsdoc": "typedoc --out docs dist --mode file --includeDeclarations --excludeExternals --hideGenerator --name \"ngx-decorate Documentation\" --readme README.md",
     "posttsdoc": "node build/minify-docs.js"
   },
