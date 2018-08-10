@@ -1,3 +1,22 @@
+## [1.0.6](https://github.com/Alorel/ngx-decorators/compare/1.0.5...1.0.6) (2018-08-10)
+
+
+### Bug Fixes
+
+* **package:** Add package keywords ([41df212](https://github.com/Alorel/ngx-decorators/commit/41df212))
+
+
+### Maintenance
+
+* Add internal doc flag to decorator helpers ([e0bd162](https://github.com/Alorel/ngx-decorators/commit/e0bd162))
+
+
+### Refactoring
+
+* **Complete:** Reduce code desting level ([4e077b6](https://github.com/Alorel/ngx-decorators/commit/4e077b6))
+* **NgxDecorate:** Reduce nesting level ([f621a4a](https://github.com/Alorel/ngx-decorators/commit/f621a4a))
+* **Unsubscribe:** Reduce code nesting level ([f39bed3](https://github.com/Alorel/ngx-decorators/commit/f39bed3))
+
 ## [1.0.5](https://github.com/Alorel/ngx-decorators/compare/1.0.4...1.0.5) (2018-08-09)
 
 
