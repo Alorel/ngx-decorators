@@ -11,6 +11,19 @@
   "esm2015": "dist/esm2015/index.js",
   "fesm2015": "dist/esm2015/index.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "angular",
+    "angular 2",
+    "angular 4",
+    "angular 5",
+    "angular 6",
+    "decorator",
+    "decorators",
+    "ngx",
+    "util",
+    "utility",
+    "utilities"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "concurrently \"npm run build:cjs\" \"npm run build:umd\" \"npm run build:esm2015\" \"npm run build:esm5\"",
