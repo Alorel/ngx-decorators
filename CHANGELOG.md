@@ -1,3 +1,15 @@
+## [1.0.7](https://github.com/Alorel/ngx-decorators/compare/1.0.6...1.0.7) (2018-08-10)
+
+
+### Bug Fixes
+
+* **TrackDestroyed:** Property is now set before the existing ngOnDestroy ([2b241d5](https://github.com/Alorel/ngx-decorators/commit/2b241d5))
+
+
+### Maintenance
+
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/semantic-release to version 1.2.2 ([7639749](https://github.com/Alorel/ngx-decorators/commit/7639749))
+
 ## [1.0.6](https://github.com/Alorel/ngx-decorators/compare/1.0.5...1.0.6) (2018-08-10)
 
 
