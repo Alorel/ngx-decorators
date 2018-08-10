@@ -24,10 +24,10 @@ function applyOnDestroy(proto: MockDestroyable): void {
   const orig = proto.ngOnDestroy || noop;
 
   proto.ngOnDestroy = function ngOnDestroy(): void {
+    destroyed(this);
     try {
       orig.apply(this, arguments);
     } finally {
-      destroyed(this);
       unsubscribe(this);
       complete(this);
       lazySubj(this);
