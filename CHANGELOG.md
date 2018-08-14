@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/Alorel/ngx-decorators/compare/1.0.8...1.1.0) (2018-08-14)
+
+
+### Features
+
+* TrackInit decorator ([2bbf0a1](https://github.com/Alorel/ngx-decorators/commit/2bbf0a1))
+
+
+### Maintenance
+
+* **package:** Update dev dependencies ([d8c470f](https://github.com/Alorel/ngx-decorators/commit/d8c470f))
+
+
+### Refactoring
+
+* **NgxDecorate:** Moved destroyed setter into try block ([3cc04a2](https://github.com/Alorel/ngx-decorators/commit/3cc04a2))
+* **package:** tslib is no longer a peer dependency; exports refactored to no longer require tslib. ([77e6893](https://github.com/Alorel/ngx-decorators/commit/77e6893))
+
 ## [1.0.8](https://github.com/Alorel/ngx-decorators/compare/1.0.7...1.0.8) (2018-08-14)
 
 
