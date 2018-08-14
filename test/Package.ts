@@ -21,7 +21,8 @@ describe('Package', function() {
     cwd = path.dirname(require.resolve('../package.json'));
   });
 
-  before('Build', (cb: any) => {
+  before('Build', function(cb: any) {
+    this.timeout(120000);
     const proc = spawn('npm', ['run', 'build'], {
       cwd,
       env: Object.assign({}, process.env, {
