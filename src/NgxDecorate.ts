@@ -26,8 +26,8 @@ function applyOnDestroy(proto: MockDestroyable): void {
   const orig = proto.ngOnDestroy || noop;
 
   proto.ngOnDestroy = function ngOnDestroy(): void {
-    destroyed(this);
     try {
+      destroyed(this);
       orig.apply(this, arguments);
     } finally {
       unsubscribe(this);
