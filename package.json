@@ -42,7 +42,8 @@
     "doctoc": "doctoc README.md --github",
     "pretsdoc": "rimraf docs",
     "tsdoc": "typedoc --out docs dist --mode file --includeDeclarations --excludeExternals --hideGenerator --name \"ngx-decorate Documentation\" --readme README.md",
-    "posttsdoc": "node build/minify-docs.js"
+    "posttsdoc": "node build/minify-docs.js",
+    "reinstall:yarn": "rm -rf node_modules yarn.lock package-lock.json && yarn install"
   },
   "repository": {
     "type": "git",
