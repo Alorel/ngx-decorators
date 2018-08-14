@@ -1,5 +1,5 @@
 /** @internal */
-export function defineImmutable(target: any, prop: any, value: any) {
+export function defineImmutable(target: any, prop: PropertyKey, value: any) {
   Object.defineProperty(target, prop, {
     configurable: false,
     enumerable: false,
