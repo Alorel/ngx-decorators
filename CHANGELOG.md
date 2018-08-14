@@ -1,3 +1,16 @@
+## [1.1.1](https://github.com/Alorel/ngx-decorators/compare/1.1.0...1.1.1) (2018-08-14)
+
+
+### Bug Fixes
+
+* **defineImmutable:** Require prop to be of type PropertyKey ([93ccc06](https://github.com/Alorel/ngx-decorators/commit/93ccc06))
+* **duplication:** Removed duplicated code in TrackDestroyed and TrackInit ([62b04af](https://github.com/Alorel/ngx-decorators/commit/62b04af))
+
+
+### Build System
+
+* Don't run release stage on tags ([b2e6e39](https://github.com/Alorel/ngx-decorators/commit/b2e6e39))
+
 # [1.1.0](https://github.com/Alorel/ngx-decorators/compare/1.0.8...1.1.0) (2018-08-14)
 
 
