@@ -5,7 +5,7 @@
 [![codebeat badge](https://codebeat.co/badges/b2f3eead-f17f-4b9c-8861-d226057cef30)](https://codebeat.co/projects/github-com-alorel-ngx-decorators-master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Alorel/ngx-decorators.svg)](https://greenkeeper.io/)
 
-Useful decorators for Angular 2 and above. Full API docs available [here](https://alorel.github.io/ngx-decorators)
+Useful decorators for Angular 2 and above. Full API docs available [here](https://alorel.github.io/ngx-decorators/)
 
 -----
 
