@@ -2,7 +2,7 @@ const {join} = require('path');
 
 module.exports = {
   target: 'web',
-  mode: 'production',
+  mode: process.env.FROM_GENERAL_SUITE ? 'development' : 'production',
   entry: join(__dirname, 'src', 'index.ts'),
   output: {
     path: join(__dirname, 'dist'),

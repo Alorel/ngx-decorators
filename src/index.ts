@@ -1,10 +1,10 @@
-export * from './lib/ConfEnum';
+export {ConfEnum} from './lib/ConfEnum';
 
-export * from './NgxDecorate';
-export * from './CdrProp';
-export * from './Unsubscribe';
-export * from './Complete';
-export * from './LazySubject';
-export * from './TrackDestroyed';
-export * from './SubjectSetter';
-export * from './TrackInit';
+export {NgxDecorate} from './NgxDecorate';
+export {CdrPropConfig, CdrProp} from './CdrProp';
+export {Unsubscribe} from './Unsubscribe';
+export {Complete} from './Complete';
+export {LazySubject} from './LazySubject';
+export {TrackDestroyed} from './TrackDestroyed';
+export {SubjectSetterConfig, SubjectSetter} from './SubjectSetter';
+export {TrackInit} from './TrackInit';
