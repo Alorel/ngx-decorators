@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/Alorel/ngx-decorators/compare/1.0.7...1.0.8) (2018-08-14)
+
+
+### Bug Fixes
+
+* **docs:** Fixed the documentation link ([a76c0ee](https://github.com/Alorel/ngx-decorators/commit/a76c0ee))
+
 ## [1.0.7](https://github.com/Alorel/ngx-decorators/compare/1.0.6...1.0.7) (2018-08-10)
 
 
