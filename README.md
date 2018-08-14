@@ -24,6 +24,7 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
   - [LazySubject - create a subject lazily](#lazysubject---create-a-subject-lazily)
   - [SubjectSetter - mirror a property to a subject](#subjectsetter---mirror-a-property-to-a-subject)
   - [TrackDestroyed - set the property to true during OnDestroy](#trackdestroyed---set-the-property-to-true-during-ondestroy)
+  - [TrackInit - set the property to true during ngOnInit](#trackinit---set-the-property-to-true-during-ngoninit)
   - [Unsubscribe - automatically unsubscribe from subscriptions](#unsubscribe---automatically-unsubscribe-from-subscriptions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -325,6 +326,10 @@ API:
 /** Set the given property to true when the component is destroyed */
 export declare function TrackDestroyed(): PropertyDecorator;
 ```
+
+## TrackInit - set the property to true during ngOnInit
+
+Same as `@TrackDestroyed()`, but for `ngOnInit`
 
 ## Unsubscribe - automatically unsubscribe from subscriptions
 

@@ -2,6 +2,7 @@ import {MockDestroyable, MockInitable} from './lib/Mocks';
 import {noop} from './lib/noop';
 import {complete} from './processors/complete';
 import {destroyed} from './processors/destroyed';
+import {init} from './processors/init';
 import {lazySubj} from './processors/lazy-subject';
 import {setProp} from './processors/setProp';
 import {unsubscribe} from './processors/unsubscribe';
@@ -12,6 +13,7 @@ function applyOnInit(proto: MockInitable): void {
 
   proto.ngOnInit = function ngOnInit(): void {
     try {
+      init(this);
       orig.apply(this, arguments);
     } finally {
       setProp(this);

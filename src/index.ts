@@ -7,3 +7,4 @@ export * from './Complete';
 export * from './LazySubject';
 export * from './TrackDestroyed';
 export * from './SubjectSetter';
+export * from './TrackInit';
