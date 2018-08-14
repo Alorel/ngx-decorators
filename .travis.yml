@@ -29,7 +29,7 @@ jobs:
   include:
   - stage: Test
   - stage: Release
-    if: branch = master AND type = push AND tag IS blank
+    if: branch = master AND type = push AND (NOT tag IS present)
     before_install: &bfiRelease
     - npm i -g yarn
     - *prepKey
