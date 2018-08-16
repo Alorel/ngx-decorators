@@ -11,6 +11,7 @@
 **/tslint.json
 /test/
 *.tgz
+/.releaserc.yml
 /git_gpg_keys.asc
 /git_gpg_keys.asc.enc
 /docs/
