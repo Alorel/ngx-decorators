@@ -1,3 +1,24 @@
+## [1.1.2](https://github.com/Alorel/ngx-decorators/compare/1.1.1...1.1.2) (2018-08-17)
+
+
+### Bug Fixes
+
+* **package:** Add yarn.lock to npmignore ([4fdd450](https://github.com/Alorel/ngx-decorators/commit/4fdd450))
+
+
+### Maintenance
+
+* Add .releaserc.yml to npmignore ([edf3766](https://github.com/Alorel/ngx-decorators/commit/edf3766))
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/conventional-changelog-alorel to version 2.0.0 ([bb52695](https://github.com/Alorel/ngx-decorators/commit/bb52695))
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/conventional-changelog-alorel to version 2.0.1 ([8088b19](https://github.com/Alorel/ngx-decorators/commit/8088b19))
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/tslint-rules to version 1.2.2 ([5e74613](https://github.com/Alorel/ngx-decorators/commit/5e74613))
+
+
+### Tests
+
+* **package:** Generate tests asynchronously ([052b18c](https://github.com/Alorel/ngx-decorators/commit/052b18c))
+* **package:** Increase timeout for build stage ([9c54622](https://github.com/Alorel/ngx-decorators/commit/9c54622))
+
 ## [1.1.1](https://github.com/Alorel/ngx-decorators/compare/1.1.0...1.1.1) (2018-08-14)
 
 
