@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@alorel-personal/conventional-changelog-alorel@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@alorel-personal/conventional-changelog-alorel/-/conventional-changelog-alorel-2.0.0.tgz#90a80bd26e2011523e577b3c38ad1b6c3b246626"
+"@alorel-personal/conventional-changelog-alorel@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@alorel-personal/conventional-changelog-alorel/-/conventional-changelog-alorel-2.0.1.tgz#004c273e6a4009fb1c7a887e1b84acee718a7878"
   dependencies:
     conventional-changelog-angular "^5.0.0"
-    json5 "^1.0.0"
+    json5 "^2.0.0"
     lodash "^4.0.0"
 
 "@alorel-personal/semantic-release@1.2.2":
@@ -2995,9 +2995,9 @@ json5@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
-json5@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
+json5@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.0.0.tgz#b61abf97aa178c4b5853a66cc8eecafd03045d78"
   dependencies:
     minimist "^1.2.0"
 
