@@ -12,6 +12,7 @@
 /test/
 *.tgz
 /.releaserc.yml
+/yarn.lock
 /git_gpg_keys.asc
 /git_gpg_keys.asc.enc
 /docs/
