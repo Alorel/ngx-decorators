@@ -16,7 +16,6 @@
 
 ### Features
 
-* SubscribeTo decorator ([51f7720](https://github.com/Alorel/ngx-decorators/commit/51f7720))
 * SubscribeTo decorator ([8586a2d](https://github.com/Alorel/ngx-decorators/commit/8586a2d))
 
 
