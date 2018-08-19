@@ -1,3 +1,31 @@
+# [1.2.0](https://github.com/Alorel/ngx-decorators/compare/1.1.2...1.2.0) (2018-08-19)
+
+
+### Dependency updates
+
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/conventional-changelog-alorel to version 2.0.2 ([6d42e4a](https://github.com/Alorel/ngx-decorators/commit/6d42e4a))
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/semantic-release to version 1.3.0 ([6ebcbf8](https://github.com/Alorel/ngx-decorators/commit/6ebcbf8))
+* **package:** update [@alorel-personal](https://github.com/alorel-personal)/semantic-release to version 1.3.0 ([3667123](https://github.com/Alorel/ngx-decorators/commit/3667123))
+* **package:** update typedoc to version 0.12.0 ([c303f9a](https://github.com/Alorel/ngx-decorators/commit/c303f9a))
+
+
+### Documentation
+
+* Add CDN link ([43c18df](https://github.com/Alorel/ngx-decorators/commit/43c18df))
+
+
+### Features
+
+* SubscribeTo decorator ([51f7720](https://github.com/Alorel/ngx-decorators/commit/51f7720))
+* SubscribeTo decorator ([8586a2d](https://github.com/Alorel/ngx-decorators/commit/8586a2d))
+
+
+### Refactoring
+
+* **internal:** Abstracted Complete and Unsubscribe decorators ([4125440](https://github.com/Alorel/ngx-decorators/commit/4125440))
+* **internal:** ensureSymbol is now typed ([2384e87](https://github.com/Alorel/ngx-decorators/commit/2384e87))
+* **internal:** let -> const in subscribeTo processor ([ad881e7](https://github.com/Alorel/ngx-decorators/commit/ad881e7))
+
 ## [1.1.2](https://github.com/Alorel/ngx-decorators/compare/1.1.1...1.1.2) (2018-08-17)
 
 
