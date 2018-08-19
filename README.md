@@ -23,6 +23,7 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
   - [Complete - automatically complete a subject](#complete---automatically-complete-a-subject)
   - [LazySubject - create a subject lazily](#lazysubject---create-a-subject-lazily)
   - [SubjectSetter - mirror a property to a subject](#subjectsetter---mirror-a-property-to-a-subject)
+  - [SubscribeTo - set a property's value from an observable](#subscribeto---set-a-propertys-value-from-an-observable)
   - [TrackDestroyed - set the property to true during OnDestroy](#trackdestroyed---set-the-property-to-true-during-ondestroy)
   - [TrackInit - set the property to true during ngOnInit](#trackinit---set-the-property-to-true-during-ngoninit)
   - [Unsubscribe - automatically unsubscribe from subscriptions](#unsubscribe---automatically-unsubscribe-from-subscriptions)
@@ -34,6 +35,14 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
 ```bash
 npm install ngx-decorate
 ```
+
+Or use the CDN version:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ngx-decorate@1.1.2/dist/ngx-decorators.umd.min.js"></script>
+```
+
+The AMD name is `NgxDecorate`.
 
 # Basic principle
 
@@ -290,6 +299,71 @@ export interface SubjectSetterConfig {
  * @param conf Optional configuration
  */
 export declare function SubjectSetter(subjectPropName: PropertyKey, conf?: SubjectSetterConfig): PropertyDecorator;
+```
+
+## SubscribeTo - set a property's value from an observable
+
+Effectively the opposite of `@SubjectSetter`
+
+Before:
+
+```typescript
+@Component({})
+export class Foo implements OnInit, OnDestroy {
+  public prop: SomeInterface;
+  private prop$: Observable<SomeInterface>;
+  private _propSubscription: Subscription;
+  
+  public constructor(private svc: SomeService, private cdr: ChangeDetectorRef) {}
+  
+  public ngOnInit(): void {
+    this.prop$ = this.svc.getSomeInterface();
+    this._propSubscription = this.prop$.subscribe((v: SomeInterface) => {
+      this.prop = v;
+      this.cdr.detectChanges();
+    });
+  }
+  
+  public ngOnDestroy(): void {
+    if (this._propSubscription) {
+      this._propSubscription.unsubscribe();
+    }
+  }
+}
+```
+
+After:
+
+```typescript
+@NgxDecorate()
+@Component({})
+export class Foo implements OnInit {
+  @SubscribeTo('prop$', {cdrProp: 'cdr'})
+  public prop: SomeInterface;
+  
+  public constructor(private svc: SomeService, private cdr: ChangeDetectorRef) {}
+  
+  public ngOnInit(): void {
+    this.prop$ = this.svc.getSomeInterface();
+  }
+}
+```
+
+
+API:
+
+```typescript
+export interface SubscribeToConfig {
+    /** Property at which the change detector resides */
+    cdrProp?: PropertyKey;
+}
+
+/**
+ * Subscribe to an observable and set its last emitted value to this property
+ * @param prop Property at which the observable resides
+ * @param cfg Optional configuration
+ */
+export declare function SubscribeTo(prop: PropertyKey, cfg?: SubscribeToConfig): PropertyDecorator;
 ```
 
 ## TrackDestroyed - set the property to true during OnDestroy

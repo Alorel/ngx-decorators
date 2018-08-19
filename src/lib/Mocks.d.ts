@@ -9,6 +9,13 @@ export interface MockUnsubscribable {
 }
 
 /** @internal */
+export interface MockSubscribable<T> {
+  next(v: T): void;
+
+  subscribe(next?: (value: T) => void, error?: (error: any) => void): MockUnsubscribable;
+}
+
+/** @internal */
 export interface MockCompletable {
   complete(): void;
 }

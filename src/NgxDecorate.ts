@@ -5,6 +5,7 @@ import {destroyed} from './processors/destroyed';
 import {init} from './processors/init';
 import {lazySubj} from './processors/lazy-subject';
 import {setProp} from './processors/setProp';
+import {subscribeTo} from './processors/subscribe-to';
 import {unsubscribe} from './processors/unsubscribe';
 
 /** @internal */
@@ -17,6 +18,7 @@ function applyOnInit(proto: MockInitable): void {
       orig.apply(this, arguments);
     } finally {
       setProp(this);
+      subscribeTo(this);
     }
   };
 }

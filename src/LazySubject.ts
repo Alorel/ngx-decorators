@@ -22,7 +22,7 @@ export function LazySubject(): MethodDecorator {
         value
       });
 
-      ensureSymbol(this, _lazySubj, []).push(value);
+      ensureSymbol<any[]>(this, _lazySubj, []).push(value);
 
       return value;
     };

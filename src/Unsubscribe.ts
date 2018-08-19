@@ -1,4 +1,4 @@
-import {ensureSymbol} from './lib/ensureSymbol';
+import {mkPropertyKeyDecorator} from './lib/mkPropertyKeyDecorator';
 import {_unsubscribe} from './lib/symbols';
 
 /**
@@ -6,7 +6,5 @@ import {_unsubscribe} from './lib/symbols';
  * The property can be either a single subscription or an array of subscriptions.
  */
 export function Unsubscribe(): PropertyDecorator {
-  return (target: any, prop: PropertyKey): void => {
-    ensureSymbol(target, _unsubscribe, []).push(prop);
-  };
+  return mkPropertyKeyDecorator(_unsubscribe);
 }
