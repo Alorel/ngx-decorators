@@ -1,4 +1,4 @@
-import {ensureSymbol} from './lib/ensureSymbol';
+import {mkPropertyKeyDecorator} from './lib/mkPropertyKeyDecorator';
 import {_complete} from './lib/symbols';
 
 /**
@@ -6,7 +6,5 @@ import {_complete} from './lib/symbols';
  * The property can be either a single object or an array of objects.
  */
 export function Complete(): PropertyDecorator {
-  return (target: any, prop: PropertyKey): void => {
-    ensureSymbol<PropertyKey[]>(target, _complete, []).push(prop);
-  };
+  return mkPropertyKeyDecorator(_complete);
 }
