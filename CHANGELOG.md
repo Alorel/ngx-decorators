@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Alorel/ngx-decorators/compare/1.2.0...1.2.1) (2018-08-19)
+
+
+### Bug Fixes
+
+* **changelog:** rm duplicate changelog entry for SubscribeTo ([c691d3d](https://github.com/Alorel/ngx-decorators/commit/c691d3d))
+
 # [1.2.0](https://github.com/Alorel/ngx-decorators/compare/1.1.2...1.2.0) (2018-08-19)
 
 
