@@ -7,6 +7,6 @@ import {_complete} from './lib/symbols';
  */
 export function Complete(): PropertyDecorator {
   return (target: any, prop: PropertyKey): void => {
-    ensureSymbol(target, _complete, []).push(prop);
+    ensureSymbol<PropertyKey[]>(target, _complete, []).push(prop);
   };
 }

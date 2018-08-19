@@ -7,6 +7,6 @@ import {_unsubscribe} from './lib/symbols';
  */
 export function Unsubscribe(): PropertyDecorator {
   return (target: any, prop: PropertyKey): void => {
-    ensureSymbol(target, _unsubscribe, []).push(prop);
+    ensureSymbol<PropertyKey[]>(target, _unsubscribe, []).push(prop);
   };
 }

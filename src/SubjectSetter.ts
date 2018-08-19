@@ -31,7 +31,8 @@ export function SubjectSetter(subjectPropName: PropertyKey, conf: SubjectSetterC
     const defaultValue = conf.default || target[prop];
 
     if (defaultValue) {
-      ensureSymbol(target, _setProp, []).push({prop, value: defaultValue});
+      ensureSymbol<{ prop: PropertyKey; value: any }[]>(target, _setProp, [])
+        .push({prop, value: defaultValue});
     }
 
     Object.defineProperties(target, {

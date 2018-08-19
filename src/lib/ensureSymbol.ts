@@ -1,5 +1,5 @@
 /** @internal */
-export function ensureSymbol(target: any, symbol: symbol, value: any): any[] {
+export function ensureSymbol<T>(target: any, symbol: symbol, value: T): T {
   if (!target[symbol]) {
     Object.defineProperty(target, symbol, {
       configurable: false,
