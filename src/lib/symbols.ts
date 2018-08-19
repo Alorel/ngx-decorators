@@ -15,3 +15,9 @@ export const _init: unique symbol = Symbol('init');
 
 /** @internal */
 export const _setProp: unique symbol = Symbol('setProp');
+
+/** @internal */
+export const _subscrTo: unique symbol = Symbol('subscrTo');
+
+/** @internal */
+export const _subscrToSubs: unique symbol = Symbol('subscrToSubs');
