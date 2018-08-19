@@ -24,7 +24,7 @@ function processSource(self: any, source: SubscribeToDef, subs: MockUnsubscribab
 
 /** @internal */
 export function subscribeTo(self: any): void {
-  let sources: SubscribeToDef[] = self[_subscrTo];
+  const sources: SubscribeToDef[] = self[_subscrTo];
 
   if (sources) {
     const subs = ensureSymbol<MockUnsubscribable[]>(self, _subscrToSubs, []);
