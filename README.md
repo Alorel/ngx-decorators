@@ -35,6 +35,14 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
 npm install ngx-decorate
 ```
 
+Or use the CDN version:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ngx-decorate@1.1.2/dist/ngx-decorators.umd.min.js"></script>
+```
+
+The AMD name is `NgxDecorate`.
+
 # Basic principle
 
 Angular apps have a lot of repetitive code - completing subjects, unsubscribing, triggering change detection etc.
