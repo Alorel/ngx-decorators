@@ -360,6 +360,9 @@ export interface SubscribeToConfig {
 
 /**
  * Subscribe to an observable and set its last emitted value to this property
+ *
+ * This decorator requires the ngOnInit hook and therefore will only work with directives and components.
+ *
  * @param prop Property at which the observable resides
  * @param cfg Optional configuration
  */
