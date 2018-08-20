@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@alorel-personal/conventional-changelog-alorel@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@alorel-personal/conventional-changelog-alorel/-/conventional-changelog-alorel-2.0.2.tgz#db1fc36ce427dd682da0ceac2cfb5d64834826d7"
+"@alorel-personal/conventional-changelog-alorel@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@alorel-personal/conventional-changelog-alorel/-/conventional-changelog-alorel-2.0.3.tgz#61c78e4bc357321f3ea8c86ffc4998105b9734ed"
   dependencies:
     conventional-changelog-angular "^5.0.0"
     json5 "^2.0.0"
