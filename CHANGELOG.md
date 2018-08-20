@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/Alorel/ngx-decorators/compare/1.2.1...1.2.2) (2018-08-20)
+
+
+### Bug Fixes
+
+* **SubscribeTo:** Added a ngOnInit note to the TSDoc of the decorator. ([5ca3507](https://github.com/Alorel/ngx-decorators/commit/5ca3507))
+
 ## [1.2.1](https://github.com/Alorel/ngx-decorators/compare/1.2.0...1.2.1) (2018-08-19)
 
 
