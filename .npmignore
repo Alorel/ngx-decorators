@@ -17,3 +17,4 @@
 /git_gpg_keys.asc.enc
 /docs/
 /build/
+/prepare-gpg-key.sh
