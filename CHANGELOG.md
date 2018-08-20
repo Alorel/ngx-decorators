@@ -1,3 +1,15 @@
+## [1.2.3](https://github.com/Alorel/ngx-decorators/compare/1.2.2...1.2.3) (2018-08-20)
+
+
+### Bug Fixes
+
+* **package:** Add prepare-gpg-key.sh to npmignore ([a8c820b](https://github.com/Alorel/ngx-decorators/commit/a8c820b))
+
+
+### Maintenance
+
+* **package:** Updated dependencies ([ab7a330](https://github.com/Alorel/ngx-decorators/commit/ab7a330))
+
 ## [1.2.2](https://github.com/Alorel/ngx-decorators/compare/1.2.1...1.2.2) (2018-08-20)
 
 
