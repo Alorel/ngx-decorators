@@ -7,7 +7,7 @@ import {Test} from 'mocha';
 import * as path from 'path';
 import * as rmrf from 'rimraf';
 
-describe('Package', function() {
+describe('Package', function () {
   interface File {
     contents: string;
     path: string;
@@ -21,7 +21,7 @@ describe('Package', function() {
     cwd = path.dirname(require.resolve('../package.json'));
   });
 
-  before('Build', function(cb: any) {
+  before('Build', function (cb: any) {
     this.timeout(120000);
     const proc = spawn('npm', ['run', 'build'], {
       cwd,
