@@ -15,11 +15,8 @@ after_success: cat ./coverage/lcov.info | coveralls
 
 after_script: if [[ $GH_TOKEN ]]; then greenkeeper-lockfile-upload; fi;
 
-before_cache: rm -rf ./node_modules/.cache
 cache:
   yarn: true
-  directories:
-  - node_modules
 
 stages:
 - Test
@@ -36,6 +33,9 @@ jobs:
     before_script: &bfsRelease
     - yarn run build
     - yarn run doctoc
+    - alo copy-files
+    - alo clean-pkg-json
+    - alo clean-dist
     script: semantic-release
     after_success: []
     after_script: []
