@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/Alorel/ngx-decorators/compare/1.2.3...1.2.4) (2018-09-05)
+
+
+### Maintenance
+
+* Run tslint --fix for updated rules ([38fe75a](https://github.com/Alorel/ngx-decorators/commit/38fe75a))
+* **package:** Clean up dist and package.json ([b6bb455](https://github.com/Alorel/ngx-decorators/commit/b6bb455))
+
 ## [1.2.3](https://github.com/Alorel/ngx-decorators/compare/1.2.2...1.2.3) (2018-08-20)
 
 

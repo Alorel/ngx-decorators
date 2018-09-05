@@ -1,6 +1,6 @@
 [![NpmVersion](https://img.shields.io/npm/v/ngx-decorate.svg?style=flat-square)](https://www.npmjs.com/package/ngx-decorate)
-[![Travis (.com) branch](https://img.shields.io/travis/com/Alorel/ngx-decorators/1.2.3.svg?style=flat-square)](https://travis-ci.com/Alorel/ngx-decorators)
-[![Coveralls github branch](https://img.shields.io/coveralls/github/Alorel/ngx-decorators/1.2.3.svg?style=flat-square)](https://coveralls.io/github/Alorel/ngx-decorators)
+[![Travis (.com) branch](https://img.shields.io/travis/com/Alorel/ngx-decorators/1.2.4.svg?style=flat-square)](https://travis-ci.com/Alorel/ngx-decorators)
+[![Coveralls github branch](https://img.shields.io/coveralls/github/Alorel/ngx-decorators/1.2.4.svg?style=flat-square)](https://coveralls.io/github/Alorel/ngx-decorators)
 [![CodeFactor](https://www.codefactor.io/repository/github/alorel/ngx-decorators/badge)](https://www.codefactor.io/repository/github/alorel/ngx-decorators)
 [![codebeat badge](https://codebeat.co/badges/b2f3eead-f17f-4b9c-8861-d226057cef30)](https://codebeat.co/projects/github-com-alorel-ngx-decorators-master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Alorel/ngx-decorators.svg)](https://greenkeeper.io/)
@@ -39,7 +39,7 @@ npm install ngx-decorate
 Or use the CDN version:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ngx-decorate@1.2.3/dist/ngx-decorators.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ngx-decorate@1.2.4/dist/ngx-decorators.umd.min.js"></script>
 ```
 
 The AMD name is `NgxDecorate`.
