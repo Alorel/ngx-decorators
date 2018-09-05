@@ -11,6 +11,7 @@
   "esm2015": "esm2015/index.js",
   "fesm2015": "esm2015/index.js",
   "types": "index.d.ts",
+  "typings": "index.d.ts",
   "keywords": [
     "angular",
     "angular 2",
