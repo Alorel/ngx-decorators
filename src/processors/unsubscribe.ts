@@ -1,5 +1,5 @@
-import {MockUnsubscribable} from '../lib/Mocks';
 import {_subscrToSubs, _unsubscribe} from '../lib/symbols';
+import {MockUnsubscribable} from '../type/Mocks';
 
 /** @internal */
 function unsubArray(props: MockUnsubscribable[]): void {

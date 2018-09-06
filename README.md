@@ -48,23 +48,27 @@ The AMD name is `NgxDecorate`.
 
 Angular apps have a lot of repetitive code - completing subjects, unsubscribing, triggering change detection etc.
 This library hooks into a component's `OnInit` and `OnDestroy` hooks and does all the magic for you.
-If your component already has an `OnInit` or `OnDestroy` hook, it will still be called. 
+If your component already has an `OnInit` or `OnDestroy` hook, it will still be called.
 
-# Usage (common)
+# IMPORTANT: AoT compilation notice
 
-Unless otherwise specified in the decorator's documentation, if you use any of the decorators, you must
-also decorate the class with `NgxDecorate()` to register the `OnInit` and `OnDestroy` hooks:
+**IMPORTANT**: For the decorators to work in AoT mode the classes *must* contain the `ngOnit` and `ngOnDestroy`
+methods. It is currently not possible to provide this functionality in the form of a Webpack plugin because
+`@ngtools/webpack` ignores loader input. Until this ceases to be the case you can use the `ngx-decorate-preprocessor`
+tool:
 
-```typescript
-import {NgxDecorate} from 'ngx-decorate';
+```bash
+npm install -D ngx-decorate-preprocessor
 
-@NgxDecorate()
-@Component({})
-export class Foo {}
+ngx-decorate-preprocess format --globs "src/my-app/**/*.ts" --indent 2
 ```
 
-At the moment of writing, only `@CdrProp()` doesn't require this, however, please refer to the code docs
-for the most up-to-date information.
+To test whether your files are valid you can use the test command, which will exit with a non-zero code if formatting
+is needed:
+
+```bash
+ngx-decorate-preprocess test --globs "src/my-app/**/*.ts" --indent 2
+```
 
 # Decorators
 ## CdrProp - automatically trigger change detection

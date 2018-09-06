@@ -1,11 +1,15 @@
-import {ConfEnum} from './lib/ConfEnum';
 import {ensureSymbol} from './lib/ensureSymbol';
-import {MockSubject} from './lib/Mocks';
+import {HookManager} from './lib/HookManager';
+import {Lifecycle} from './lib/Lifecycle';
 import {_setProp} from './lib/symbols';
+import {setProp} from './processors/setProp';
+import {ConfEnum} from './type/ConfEnum';
+import {MockSubject} from './type/Mocks';
 
 export interface SubjectSetterConfig {
   /** Default value to set on the prototype */
   default?: any;
+
   /** Partial property descriptor */
   desc?: ConfEnum;
 }
@@ -33,6 +37,7 @@ export function SubjectSetter(subjectPropName: PropertyKey, conf: SubjectSetterC
     if (defaultValue) {
       ensureSymbol<{ prop: PropertyKey; value: any }[]>(target, _setProp, [])
         .push({prop, value: defaultValue});
+      HookManager.for(target).add(Lifecycle.POST_INIT, setProp);
     }
 
     Object.defineProperties(target, {

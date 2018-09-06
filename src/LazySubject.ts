@@ -1,5 +1,8 @@
 import {ensureSymbol} from './lib/ensureSymbol';
+import {HookManager} from './lib/HookManager';
+import {Lifecycle} from './lib/Lifecycle';
 import {_lazySubj} from './lib/symbols';
+import {lazySubj} from './processors/lazy-subject';
 
 /**
  * Decorate a getter that returns a subject. The subject will automatically get completed
@@ -26,5 +29,7 @@ export function LazySubject(): MethodDecorator {
 
       return value;
     };
+
+    HookManager.for(_target).add(Lifecycle.POST_DESTROY, lazySubj);
   };
 }

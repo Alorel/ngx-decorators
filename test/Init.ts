@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 import {Proto} from 'typescript-proto-decorator';
-import {NgxDecorate, TrackInit} from '../src';
+import {TrackInit} from '../src';
 
 describe('Init', () => {
   interface Mock {
@@ -12,7 +12,6 @@ describe('Init', () => {
   let mock: Mock;
 
   beforeEach('init', () => {
-    @NgxDecorate()
     class C implements Mock {
       @TrackInit()
       @Proto(false)

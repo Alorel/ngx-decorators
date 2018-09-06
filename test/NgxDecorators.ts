@@ -1,19 +1,31 @@
 import {expect} from 'chai';
-import {NgxDecorate} from '../src';
+import {TrackDestroyed, TrackInit} from '../src';
 
-describe('NgxDecorate', () => {
-  it('Should define a ngOnDestroy', () => {
-    @NgxDecorate()
+describe('NgxDecorators (common)', () => {
+  it('Should define a ngOnDestroy if required', () => {
     class C {
+      @TrackDestroyed()
+      public foo: any;
     }
 
     new C()['ngOnDestroy']();
   });
 
+  it('Should not define ngOnDestroy if not required', () => {
+    class C {
+      @TrackInit()
+      public foo: any;
+    }
+
+    expect(() => new C()['ngOnDestroy']()).to.throw;
+  });
+
   it('Should call existing ngOnDestroy', () => {
-    @NgxDecorate()
     class C {
       public calls = 0;
+
+      @TrackDestroyed()
+      public foo: any;
 
       public ngOnDestroy() {
         this.calls++;
@@ -26,9 +38,11 @@ describe('NgxDecorate', () => {
   });
 
   it('Should call existing ngOnInit', () => {
-    @NgxDecorate()
     class C {
       public calls = 0;
+
+      @TrackInit()
+      public foo: any;
 
       public ngOnInit() {
         this.calls++;
@@ -44,12 +58,14 @@ describe('NgxDecorate', () => {
     class C1 {
       public c1Calls = 0;
 
+      @TrackDestroyed()
+      public foo: any;
+
       public ngOnDestroy() {
         this.c1Calls++;
       }
     }
 
-    @NgxDecorate()
     class C2 extends C1 {
     }
 
@@ -67,8 +83,9 @@ describe('NgxDecorate', () => {
       }
     }
 
-    @NgxDecorate()
     class C2 extends C1 {
+      @TrackDestroyed()
+      public foo: any;
 
       public ngOnDestroy() {
         super.ngOnDestroy();

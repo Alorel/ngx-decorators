@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import * as _ from 'lodash';
-import {NgxDecorate, SubscribeTo} from '../src';
-import {MockDestroyable, MockInitable, MockSubscribable, MockUnsubscribable} from '../src/lib/Mocks';
+import {SubscribeTo} from '../src';
+import {MockDestroyable, MockInitable, MockSubscribable, MockUnsubscribable} from '../src/type/Mocks';
 
 describe('SubscribeTo', () => {
   function mkSubscribable<T = any>(self: { unsubCalls: number }): MockSubscribable<T> {
@@ -25,13 +25,17 @@ describe('SubscribeTo', () => {
 
   interface Mock extends MockInitable, MockDestroyable {
     sub: MockSubscribable<any>;
+
     unsubCalls: number;
+
     value: any;
   }
 
   abstract class AbstractMock implements Mock {
     public sub: MockSubscribable<any>;
+
     public unsubCalls = 0;
+
     public abstract value: any;
 
     public ngOnDestroy(): void {
@@ -46,20 +50,22 @@ describe('SubscribeTo', () => {
   describe('With cdr', () => {
     interface CdrMock extends Mock {
       cdr: { detectChanges(): void };
+
       cdrCalls: number;
     }
 
     let mock: CdrMock;
 
     beforeEach('Init new mock', () => {
-      @NgxDecorate()
       class MockImpl extends AbstractMock implements CdrMock {
         public cdrCalls = 0;
+
         public cdr = {
           detectChanges: () => {
             this.cdrCalls++;
           }
         };
+
         @SubscribeTo('sub', {cdrProp: 'cdr'})
         public value: any;
       }
@@ -95,7 +101,6 @@ describe('SubscribeTo', () => {
     let mock: Mock;
 
     beforeEach('Init new mock', () => {
-      @NgxDecorate()
       class MockImpl extends AbstractMock {
         @SubscribeTo('sub')
         public value: any;
@@ -130,7 +135,6 @@ describe('SubscribeTo', () => {
   });
 
   it('Should be a no-op if source is not defined', () => {
-    @NgxDecorate()
     class EmptyMock extends AbstractMock {
       @SubscribeTo('foo')
       public value: any;

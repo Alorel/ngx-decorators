@@ -1,6 +1,6 @@
 import {expect} from 'chai';
-import {Complete, NgxDecorate} from '../src';
-import {MockCompletable, MockDestroyable} from '../src/lib/Mocks';
+import {Complete} from '../src';
+import {MockCompletable, MockDestroyable} from '../src/type/Mocks';
 
 interface Completable extends MockCompletable {
   count: number;
@@ -21,7 +21,6 @@ describe('Complete', () => {
   }
 
   it('Should be a noop on undefined', () => {
-    @NgxDecorate()
     class C implements Mock {
       @Complete()
       public subj: Completable;
@@ -36,7 +35,6 @@ describe('Complete', () => {
   });
 
   it('Should be a noop on undefined (array)', () => {
-    @NgxDecorate()
     class C implements Mock {
       @Complete()
       public subj: Completable;
@@ -51,7 +49,6 @@ describe('Complete', () => {
   });
 
   it('Should complete (1)', () => {
-    @NgxDecorate()
     class C {
       @Complete()
       public sub: Completable = mkCompletable();
@@ -63,9 +60,9 @@ describe('Complete', () => {
   });
 
   it('Should complete (array)', () => {
-    @NgxDecorate()
     class C {
       public sub: Completable;
+
       // noinspection JSMismatchedCollectionQueryUpdate
       @Complete()
       public subs: Completable[];
@@ -89,10 +86,10 @@ describe('Complete', () => {
   });
 
   it('Should complete multiple singles', () => {
-    @NgxDecorate()
     class C {
       @Complete()
       public sub: Completable = mkCompletable();
+
       @Complete()
       public sub2: Completable = this.sub;
     }
@@ -103,11 +100,12 @@ describe('Complete', () => {
   });
 
   it('Should complete (multi-array)', () => {
-    @NgxDecorate()
     class C {
       public sub: Completable;
+
       @Complete()
       public subs: Completable[];
+
       // noinspection JSMismatchedCollectionQueryUpdate
       @Complete()
       public subs2: Completable[];

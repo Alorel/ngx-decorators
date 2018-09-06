@@ -1,6 +1,6 @@
 import {expect} from 'chai';
-import {NgxDecorate, Unsubscribe} from '../src';
-import {MockDestroyable, MockUnsubscribable} from '../src/lib/Mocks';
+import {Unsubscribe} from '../src';
+import {MockDestroyable, MockUnsubscribable} from '../src/type/Mocks';
 
 interface Unsub extends MockUnsubscribable {
   count: number;
@@ -21,7 +21,6 @@ describe('Unsubscribe', () => {
   }
 
   it('Should be a noop on undefined', () => {
-    @NgxDecorate()
     class C implements Mock {
       @Unsubscribe()
       public sub: Unsub;
@@ -36,7 +35,6 @@ describe('Unsubscribe', () => {
   });
 
   it('Should be a noop on undefined (array)', () => {
-    @NgxDecorate()
     class C implements Mock {
       @Unsubscribe()
       public sub: Unsub;
@@ -51,7 +49,6 @@ describe('Unsubscribe', () => {
   });
 
   it('Should unsubscribe (1)', () => {
-    @NgxDecorate()
     class C {
       @Unsubscribe()
       public sub: Unsub = mkUnsub();
@@ -63,9 +60,9 @@ describe('Unsubscribe', () => {
   });
 
   it('Should unsubscribe (array)', () => {
-    @NgxDecorate()
     class C {
       public sub: Unsub;
+
       // noinspection JSMismatchedCollectionQueryUpdate
       @Unsubscribe()
       public subs: Unsub[];
@@ -89,10 +86,10 @@ describe('Unsubscribe', () => {
   });
 
   it('Should unsub multiple singles', () => {
-    @NgxDecorate()
     class C {
       @Unsubscribe()
       public sub: Unsub = mkUnsub();
+
       @Unsubscribe()
       public sub2: Unsub = this.sub;
     }
@@ -103,11 +100,12 @@ describe('Unsubscribe', () => {
   });
 
   it('Should unsubscribe (multi-array)', () => {
-    @NgxDecorate()
     class C {
       public sub: Unsub;
+
       @Unsubscribe()
       public subs: Unsub[];
+
       // noinspection JSMismatchedCollectionQueryUpdate
       @Unsubscribe()
       public subs2: Unsub[];
