@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import {Proto} from 'typescript-proto-decorator';
-import {NgxDecorate, SubjectSetter} from '../src';
-import {MockSubject} from '../src/lib/Mocks';
+import {SubjectSetter} from '../src';
+import {MockSubject} from '../src/type/Mocks';
 
 describe('SubjectSetter', () => {
   interface Sbj<T = any> extends MockSubject<T> {
@@ -121,13 +121,13 @@ describe('SubjectSetter', () => {
   describe('Functionality', () => {
     interface Mock {
       prop: string;
+
       sbj: Sbj<string>;
     }
 
     let mock: Mock;
 
     beforeEach('reset mock', () => {
-      @NgxDecorate()
       class M implements Mock {
         @SubjectSetter('sbj', {default: 'bar'})
         public prop: string;

@@ -1,6 +1,6 @@
 import {completeArray} from '../lib/completeArray';
-import {MockCompletable} from '../lib/Mocks';
 import {_complete} from '../lib/symbols';
+import {MockCompletable} from '../type/Mocks';
 
 /** @internal */
 function processProp(prop: MockCompletable | MockCompletable[]): void {

@@ -1,6 +1,6 @@
 import {expect} from 'chai';
 import {Proto} from 'typescript-proto-decorator';
-import {NgxDecorate, TrackDestroyed} from '../src';
+import {TrackDestroyed} from '../src';
 
 describe('Destroyed', () => {
   interface Mock {
@@ -12,7 +12,6 @@ describe('Destroyed', () => {
   let mock: Mock;
 
   beforeEach('init', () => {
-    @NgxDecorate()
     class C implements Mock {
       @TrackDestroyed()
       @Proto(false)

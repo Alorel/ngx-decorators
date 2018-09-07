@@ -1,5 +1,9 @@
 import {ensureSymbol} from './lib/ensureSymbol';
+import {HookManager} from './lib/HookManager';
+import {Lifecycle} from './lib/Lifecycle';
 import {_subscrTo} from './lib/symbols';
+import {subscribeTo} from './processors/subscribe-to';
+import {unsubscribe} from './processors/unsubscribe';
 
 export interface SubscribeToConfig {
   /** Property at which the change detector resides */
@@ -9,7 +13,9 @@ export interface SubscribeToConfig {
 /** @internal */
 export interface SubscribeToDef {
   readonly cfg: SubscribeToConfig;
+
   readonly source: PropertyKey;
+
   readonly target: PropertyKey;
 }
 
@@ -29,5 +35,8 @@ export function SubscribeTo(prop: PropertyKey, cfg: SubscribeToConfig = {}): Pro
         source: prop,
         target: key
       });
+    const mgr = HookManager.for(target);
+    mgr.add(Lifecycle.POST_INIT, subscribeTo);
+    mgr.add(Lifecycle.POST_DESTROY, unsubscribe);
   };
 }

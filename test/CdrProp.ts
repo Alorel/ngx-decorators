@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import {Proto} from 'typescript-proto-decorator';
 import {CdrProp} from '../src/CdrProp';
-import {MockCdr} from '../src/lib/Mocks';
+import {MockCdr} from '../src/type/Mocks';
 
 describe('CdrProp', () => {
   interface Cdr extends MockCdr {

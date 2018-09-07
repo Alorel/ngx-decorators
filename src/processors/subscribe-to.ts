@@ -1,7 +1,7 @@
 import {ensureSymbol} from '../lib/ensureSymbol';
-import {MockCdr, MockSubscribable, MockUnsubscribable} from '../lib/Mocks';
 import {_subscrTo, _subscrToSubs} from '../lib/symbols';
 import {SubscribeToDef} from '../SubscribeTo';
+import {MockCdr, MockSubscribable, MockUnsubscribable} from '../type/Mocks';
 
 /** @internal */
 function processSource(self: any, source: SubscribeToDef, subs: MockUnsubscribable[]): void {

@@ -1,6 +1,5 @@
-export {ConfEnum} from './lib/ConfEnum';
+export {ConfEnum} from './type/ConfEnum';
 
-export {NgxDecorate} from './NgxDecorate';
 export {CdrPropConfig, CdrProp} from './CdrProp';
 export {Unsubscribe} from './Unsubscribe';
 export {Complete} from './Complete';

@@ -21,3 +21,6 @@ export const _subscrTo: unique symbol = Symbol('subscrTo');
 
 /** @internal */
 export const _subscrToSubs: unique symbol = Symbol('subscrToSubs');
+
+/** @internal */
+export const _hookMgr: unique symbol = Symbol('hookMgr');

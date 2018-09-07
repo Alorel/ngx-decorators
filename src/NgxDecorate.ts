@@ -1,4 +1,3 @@
-import {MockDestroyable, MockInitable} from './lib/Mocks';
 import {noop} from './lib/noop';
 import {complete} from './processors/complete';
 import {destroyed} from './processors/destroyed';
@@ -7,6 +6,7 @@ import {lazySubj} from './processors/lazy-subject';
 import {setProp} from './processors/setProp';
 import {subscribeTo} from './processors/subscribe-to';
 import {unsubscribe} from './processors/unsubscribe';
+import {MockDestroyable, MockInitable} from './type/Mocks';
 
 /** @internal */
 function applyOnInit(proto: MockInitable): void {

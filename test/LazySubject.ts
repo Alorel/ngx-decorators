@@ -1,8 +1,7 @@
 import {expect} from 'chai';
 import {Proto} from 'typescript-proto-decorator';
-import {NgxDecorate} from '../src';
-import {LazySubject} from '../src/LazySubject';
-import {MockCompletable} from '../src/lib/Mocks';
+import {LazySubject} from '../src';
+import {MockCompletable} from '../src/type/Mocks';
 
 describe('LazySubject', () => {
   function noop(..._args: any[]): void {
@@ -58,7 +57,6 @@ describe('LazySubject', () => {
   });
 
   it('Clear should be noop if getter is not called', () => {
-    @NgxDecorate()
     class C {
       public calls = 0;
 
@@ -76,7 +74,6 @@ describe('LazySubject', () => {
   });
 
   it('Should unsubscribe', () => {
-    @NgxDecorate()
     class C {
       @LazySubject()
       public get subj() {

@@ -1,11 +1,13 @@
-import {ConfEnum} from './lib/ConfEnum';
-import {MockCdr} from './lib/Mocks';
+import {ConfEnum} from './type/ConfEnum';
+import {MockCdr} from './type/Mocks';
 
 export interface CdrPropConfig {
   /** Default value to set on the prototype */
   default?: any;
+
   /** Partial property descriptor */
   desc?: ConfEnum;
+
   /**
    * Key of a property used for tracking whether the component's been destroyed
    * to prevent errors caused by triggering change detection on a destroyed component.
