@@ -52,7 +52,7 @@ If your component already has an `OnInit` or `OnDestroy` hook, it will still be 
 
 # IMPORTANT: AoT compilation notice
 
-**IMPORTANT**: For the decorators to work in AoT mode the classes *must* contain the `ngOnit` and `ngOnDestroy`
+**IMPORTANT**: For the decorators to work in AoT mode the classes *must* contain the `ngOnInit` and `ngOnDestroy`
 methods. It is currently not possible to provide this functionality in the form of a Webpack plugin because
 `@ngtools/webpack` ignores loader input. Until this ceases to be the case you can use the `ngx-decorate-preprocessor`
 tool:
