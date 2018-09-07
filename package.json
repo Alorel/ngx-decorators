@@ -65,6 +65,7 @@
     "@alorel-personal/tslint-rules": "2.0.0",
     "@semantic-release/changelog": "3.0.0",
     "@semantic-release/exec": "3.1.2",
+    "@semantic-release/git": "7.0.3",
     "@types/bluebird": "3.5.24",
     "@types/chai": "4.1.4",
     "@types/cross-spawn": "6.0.0",
