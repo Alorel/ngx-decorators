@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/Alorel/ngx-decorators/compare/2.0.3...2.0.4) (2018-09-07)
+
+
+### Documentation
+
+* **README:** Add link to ngx-decorate-preprocessor ([73c5deb](https://github.com/Alorel/ngx-decorators/commit/73c5deb))
+
 ## [2.0.3](https://github.com/Alorel/ngx-decorators/compare/2.0.2...2.0.3) (2018-09-07)
 
 
