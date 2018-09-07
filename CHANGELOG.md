@@ -1,3 +1,15 @@
+## [2.0.1](https://github.com/Alorel/ngx-decorators/compare/2.0.0...2.0.1) (2018-09-07)
+
+
+### Bug Fixes
+
+* **package:** Remove actual NgxDecorate file ([fc332d8](https://github.com/Alorel/ngx-decorators/commit/fc332d8))
+
+
+### Documentation
+
+* **CdrProp:** Remove reference to NgxDecorate ([c42014a](https://github.com/Alorel/ngx-decorators/commit/c42014a))
+
 # [2.0.0](https://github.com/Alorel/ngx-decorators/compare/1.2.4...2.0.0) (2018-09-07)
 
 
