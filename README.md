@@ -54,21 +54,8 @@ If your component already has an `OnInit` or `OnDestroy` hook, it will still be 
 
 **IMPORTANT**: For the decorators to work in AoT mode the classes *must* contain the `ngOnInit` and `ngOnDestroy`
 methods. It is currently not possible to provide this functionality in the form of a Webpack plugin because
-`@ngtools/webpack` ignores loader input. Until this ceases to be the case you can use the `ngx-decorate-preprocessor`
-tool:
-
-```bash
-npm install -D ngx-decorate-preprocessor
-
-ngx-decorate-preprocess format --globs "src/my-app/**/*.ts" --indent 2
-```
-
-To test whether your files are valid you can use the test command, which will exit with a non-zero code if formatting
-is needed:
-
-```bash
-ngx-decorate-preprocess test --globs "src/my-app/**/*.ts" --indent 2
-```
+`@ngtools/webpack` ignores loader input. Until this ceases to be the case you can use the 
+[ngx-decorate-preprocessor](https://www.npmjs.com/package/ngx-decorate-preprocessor) tool.
 
 # Decorators
 ## CdrProp - automatically trigger change detection
