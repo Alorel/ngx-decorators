@@ -1,3 +1,26 @@
+# [2.0.0](https://github.com/Alorel/ngx-decorators/compare/1.2.4...2.0.0) (2018-09-07)
+
+
+### Documentation
+
+* Refresh README ([e2a0572](https://github.com/Alorel/ngx-decorators/commit/e2a0572))
+
+
+### Maintenance
+
+* **package:** Set tslib as a peer dependency ([1446d23](https://github.com/Alorel/ngx-decorators/commit/1446d23))
+
+
+### Refactoring
+
+* Remove the need for the NgxDecorate ([4488926](https://github.com/Alorel/ngx-decorators/commit/4488926))
+
+
+### BREAKING CHANGES
+
+* **package:** New peer dependency: `tslib@^1.6.0`
+* The NgxDecorate decorator has been removed and is no longer needed.
+
 ## [1.2.4](https://github.com/Alorel/ngx-decorators/compare/1.2.3...1.2.4) (2018-09-05)
 
 
