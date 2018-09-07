@@ -12,7 +12,7 @@ install: yarn install --check-files
 script:
 - yarn run tslint
 - yarn run build
-- if [[ $GH_TOKEN ]]; then yarn run prep-release && semantic-release --dry-run --branch $TRAVIS_BRANCH; fi;
+- if [[ $GH_TOKEN ]]; then alo copy-files && semantic-release --dry-run --branch $TRAVIS_BRANCH; fi;
 - yarn run test --forbid-only --forbid-pending
 
 after_success: cat ./coverage/lcov.info | coveralls
@@ -37,7 +37,7 @@ jobs:
     before_script: &bfsRelease
     - yarn run build
     - yarn run doctoc
-    - yarn run prep-release
+    - alo copy-files
     script: semantic-release
     after_success: []
     after_script: []

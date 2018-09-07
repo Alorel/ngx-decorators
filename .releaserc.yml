@@ -9,7 +9,11 @@ prepare:
 - path: '@semantic-release/npm'
   pkgRoot: '.'
 - path: '@semantic-release/exec'
-  cmd: ./node_modules/.bin/alo copy-files
+  cmd: alo copy-files
+- path: '@semantic-release/exec'
+  cmd: alo clean-dist
+- path: '@semantic-release/exec'
+  cmd: alo clean-pkg-json
 - path: '@semantic-release/git'
   message: 'chore(release): ${nextRelease.version}'
   assets:
