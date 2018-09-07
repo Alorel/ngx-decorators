@@ -56,6 +56,9 @@
     "url": "https://github.com/Alorel/ngx-decorators/issues"
   },
   "homepage": "https://alorel.github.io/ngx-decorators/",
+  "peerDependencies": {
+    "tslib": "^1.6.0"
+  },
   "devDependencies": {
     "@alorel-personal/build-tools": "~3.0.0",
     "@alorel-personal/conventional-changelog-alorel": "2.0.3",
