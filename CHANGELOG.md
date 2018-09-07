@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/Alorel/ngx-decorators/compare/2.0.2...2.0.3) (2018-09-07)
+
+
+### Bug Fixes
+
+* **build:** Pushed dist files should now be handled properly ([#20](https://github.com/Alorel/ngx-decorators/issues/20)) ([e5368bf](https://github.com/Alorel/ngx-decorators/commit/e5368bf))
+
 ## [2.0.2](https://github.com/Alorel/ngx-decorators/compare/2.0.1...2.0.2) (2018-09-07)
 
 
