@@ -11,8 +11,7 @@ install: yarn install --check-files
 
 script:
 - yarn run tslint
-- yarn run build
-- if [[ $GH_TOKEN ]]; then semantic-release --dry-run --branch $TRAVIS_BRANCH; fi;
+- if [[ $GH_TOKEN ]]; then yarn run build && semantic-release --dry-run --branch $TRAVIS_BRANCH; else yarn run typecheck; fi;
 - yarn run test --forbid-only --forbid-pending
 
 after_success: cat ./coverage/lcov.info | coveralls
