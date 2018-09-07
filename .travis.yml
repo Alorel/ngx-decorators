@@ -33,9 +33,7 @@ jobs:
     before_script: &bfsRelease
     - yarn run build
     - yarn run doctoc
-    - alo copy-files
-    - alo clean-pkg-json
-    - alo clean-dist
+    - yarn run prep-release
     script: semantic-release
     after_success: []
     after_script: []

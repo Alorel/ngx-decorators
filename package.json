@@ -32,6 +32,7 @@
     "build:esm2015": "tsc -p ./tsconfig-esm2015.json",
     "build:esm5": "tsc -p ./tsconfig-esm5.json",
     "build:umd": "webpack",
+    "prep-release": "concurrently \"alo copy-files && alo clean-pkg-json\" \"alo clean-dist\"",
     "pretest": "rimraf coverage",
     "test": "nyc mocha --opts ./mocha.opts",
     "test:watch": "npm run test -- --watch",
