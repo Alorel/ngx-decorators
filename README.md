@@ -17,7 +17,7 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
 
 - [Installation](#installation)
 - [Basic principle](#basic-principle)
-- [Usage (common)](#usage-common)
+- [IMPORTANT: AoT compilation notice](#important-aot-compilation-notice)
 - [Decorators](#decorators)
   - [CdrProp - automatically trigger change detection](#cdrprop---automatically-trigger-change-detection)
   - [Complete - automatically complete a subject](#complete---automatically-complete-a-subject)
