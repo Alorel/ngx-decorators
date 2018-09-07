@@ -1,10 +1,15 @@
 branch: master
 tagFormat: '${version}'
 
+verifyConditions:
+- path: &npm '@semantic-release/npm'
+  pkgRoot: '.'
+- &gh '@semantic-release/github'
+
 prepare:
 - '@semantic-release/changelog'
 - '@alorel-personal/semantic-release'
-- &npm '@semantic-release/npm'
+- *npm
 - path: &exec '@semantic-release/exec'
   cmd: yarn run doctoc
 - path: *exec
@@ -22,9 +27,9 @@ prepare:
   - yarn.lock
 
 publish:
-  - path: *npm
-    pkgRoot: './dist'
-  - '@semantic-release/github'
+- path: *npm
+  pkgRoot: './dist'
+- *gh
 
 generateNotes:
   config: '@alorel-personal/conventional-changelog-alorel'
