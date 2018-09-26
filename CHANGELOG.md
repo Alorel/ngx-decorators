@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/Alorel/ngx-decorators/compare/3.0.0...3.0.1) (2018-09-26)
+
+
+### Documentation
+
+* Add class inheritance notice ([f416944](https://github.com/Alorel/ngx-decorators/commit/f416944))
+
 # [3.0.0](https://github.com/Alorel/ngx-decorators/compare/2.0.4...3.0.0) (2018-09-26)
 
 
