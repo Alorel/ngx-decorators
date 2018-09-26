@@ -11,7 +11,7 @@ function processSource(self: any, source: SubscribeToDef, subs: MockUnsubscribab
   if (cdrProp) {
     subscrFn = v => {
       self[source.target] = v;
-      (<MockCdr>self[<PropertyKey>source.cfg.cdrProp]).detectChanges();
+      (<MockCdr>self[<PropertyKey>source.cfg.cdrProp]).markForCheck();
     };
   } else {
     subscrFn = v => {

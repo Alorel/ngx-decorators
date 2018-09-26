@@ -16,7 +16,7 @@ export interface CdrPropConfig {
 }
 
 /**
- * Call .detectChanges() on the change detector ref whenever this property is written to.
+ * Call .markForCheck() on the change detector ref whenever this property is written to.
  *
  * @param propName Property at which the change detector can be found
  * @param conf Optional configuration
@@ -43,7 +43,7 @@ export function CdrProp(propName: PropertyKey, conf: CdrPropConfig = {}): Proper
         set(v: any) {
           this[sym] = v;
           if (!conf.destroyed || !this[conf.destroyed]) {
-            (<MockCdr>this[propName]).detectChanges();
+            (<MockCdr>this[propName]).markForCheck();
           }
         }
       })

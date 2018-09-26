@@ -16,7 +16,7 @@ describe('CdrProp', () => {
   function mkCdr(): Cdr {
     return {
       calls: 0,
-      detectChanges() {
+      markForCheck() {
         this.calls++;
       }
     };
