@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/Alorel/ngx-decorators/compare/2.0.4...3.0.0) (2018-09-26)
+
+
+### Maintenance
+
+* **package:** Update chai & ts-loader ([37fa35f](https://github.com/Alorel/ngx-decorators/commit/37fa35f))
+* **package:** Update tslint-rules ([b9e6445](https://github.com/Alorel/ngx-decorators/commit/b9e6445))
+
+
+### Performance Improvements
+
+* Refactor the code to use ChangeDetectorRef's `markForCheck()` method instead of `detectChanges()` ([bcab7a3](https://github.com/Alorel/ngx-decorators/commit/bcab7a3))
+
+
+### BREAKING CHANGES
+
+* The library now uses the ChangeDetectorRef's `markForCheck()` method instead of `detectChanges()`. This would break your code **only** if you were somehow relying on the change detection to be synchronous, which very rarely the case.
+
 ## [2.0.4](https://github.com/Alorel/ngx-decorators/compare/2.0.3...2.0.4) (2018-09-07)
 
 
