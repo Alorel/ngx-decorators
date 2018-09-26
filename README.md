@@ -17,7 +17,9 @@ Useful decorators for Angular 2 and above. Full API docs available [here](https:
 
 - [Installation](#installation)
 - [Basic principle](#basic-principle)
-- [IMPORTANT: AoT compilation notice](#important-aot-compilation-notice)
+- [IMPORTANT](#important)
+  - [AoT compilation notice](#aot-compilation-notice)
+  - [Class inheritance](#class-inheritance)
 - [Decorators](#decorators)
   - [CdrProp - automatically trigger change detection](#cdrprop---automatically-trigger-change-detection)
   - [Complete - automatically complete a subject](#complete---automatically-complete-a-subject)
@@ -50,12 +52,18 @@ Angular apps have a lot of repetitive code - completing subjects, unsubscribing,
 This library hooks into a component's `OnInit` and `OnDestroy` hooks and does all the magic for you.
 If your component already has an `OnInit` or `OnDestroy` hook, it will still be called.
 
-# IMPORTANT: AoT compilation notice
+# IMPORTANT
+## AoT compilation notice
 
-**IMPORTANT**: For the decorators to work in AoT mode the classes *must* contain the `ngOnInit` and `ngOnDestroy`
+For the decorators to work in AoT mode the classes *must* contain the `ngOnInit` and `ngOnDestroy`
 methods. It is currently not possible to provide this functionality in the form of a Webpack plugin because
 `@ngtools/webpack` ignores loader input. Until this ceases to be the case you can use the 
 [ngx-decorate-preprocessor](https://www.npmjs.com/package/ngx-decorate-preprocessor) tool.
+
+## Class inheritance
+
+The decorators might not work or work incorrectly if used from within a subclass. Only
+use the decorators for classes that do not extend other classes.
 
 # Decorators
 ## CdrProp - automatically trigger change detection
