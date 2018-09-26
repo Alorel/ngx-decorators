@@ -1,6 +1,6 @@
 /** @internal */
 export interface MockCdr {
-  detectChanges(): void;
+  markForCheck(): void;
 }
 
 /** @internal */

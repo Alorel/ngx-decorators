@@ -49,7 +49,7 @@ describe('SubscribeTo', () => {
 
   describe('With cdr', () => {
     interface CdrMock extends Mock {
-      cdr: { detectChanges(): void };
+      cdr: { markForCheck(): void };
 
       cdrCalls: number;
     }
@@ -61,7 +61,7 @@ describe('SubscribeTo', () => {
         public cdrCalls = 0;
 
         public cdr = {
-          detectChanges: () => {
+          markForCheck: () => {
             this.cdrCalls++;
           }
         };

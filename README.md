@@ -75,7 +75,7 @@ export class Foo {
   
   public set prop(v: string) {
     this._prop = v;
-    this.cdr.detectChanges();
+    this.cdr.markForCheck();
   }
 }
 ```
@@ -109,7 +109,7 @@ export interface CdrPropConfig {
     destroyed?: PropertyKey;
 }
 /**
- * Call .detectChanges() on the change detector ref whenever this property is written to.
+ * Call .markForCheck() on the change detector ref whenever this property is written to.
  * This decorator does <b>not</b> require the class to be decorated with {@link NgxDecorate}
  *
  * @param propName Property at which the change detector can be found
@@ -311,7 +311,7 @@ export class Foo implements OnInit, OnDestroy {
     this.prop$ = this.svc.getSomeInterface();
     this._propSubscription = this.prop$.subscribe((v: SomeInterface) => {
       this.prop = v;
-      this.cdr.detectChanges();
+      this.cdr.markForCheck();
     });
   }
   
