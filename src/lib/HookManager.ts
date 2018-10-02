@@ -4,6 +4,7 @@ import {defineImmutable} from './defineProp';
 import {Lifecycle, LifecycleAbridged, toAbridged} from './Lifecycle';
 import {_hookMgr} from './symbols';
 
+/** @internal */
 function ngOnDestroy(): void {
   //mock
 }
@@ -12,9 +13,6 @@ function ngOnDestroy(): void {
 function ngOnInit(): void {
   // mock
 }
-
-defineImmutable(ngOnDestroy, 'name', 'ngOnDestroy');
-defineImmutable(ngOnInit, 'name', 'ngOnInit');
 
 /** @internal */
 export class HookManager {
@@ -37,21 +35,21 @@ export class HookManager {
   }
 
   private get newDestroy(): () => void {
-    const value = this.newFn(this.preDestroys, this.postDestroys, this.origDestroy, 'ngOnDestroy');
+    const value = this.newFn(this.preDestroys, this.postDestroys, this.origDestroy);
     defineImmutable(this, 'newDestroy', value);
 
     return value;
   }
 
   private get newInit(): () => void {
-    const value = this.newFn(this.preInits, this.postInits, this.origInit, 'ngOnInit');
+    const value = this.newFn(this.preInits, this.postInits, this.origInit);
     defineImmutable(this, 'newInit', value);
 
     return value;
   }
 
   public static for(proto: any): HookManager {
-    if (!(_hookMgr in proto)) {
+    if (!proto[_hookMgr]) {
       defineImmutable(proto, _hookMgr, new HookManager(proto));
     }
 
@@ -82,7 +80,7 @@ export class HookManager {
     }
   }
 
-  private newFn(pres: Set<HookFn>, posts: Set<HookFn>, orig: Function, name: string): () => void {
+  private newFn(pres: Set<HookFn>, posts: Set<HookFn>, orig: Function): () => void {
     const value = function (this: any): void {
       try {
         for (const fn of pres) {
@@ -95,7 +93,6 @@ export class HookManager {
         }
       }
     };
-    defineImmutable(value, 'name', name);
 
     return value;
   }
