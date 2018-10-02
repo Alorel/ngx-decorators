@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/Alorel/ngx-decorators/compare/3.0.1...3.0.2) (2018-10-02)
+
+
+### Bug Fixes
+
+* Fix errors caused by some Symbol polyfills & IE11 erroring out when 'name' is defined on a function. ([ea7d2c2](https://github.com/Alorel/ngx-decorators/commit/ea7d2c2))
+
 ## [3.0.1](https://github.com/Alorel/ngx-decorators/compare/3.0.0...3.0.1) (2018-09-26)
 
 
