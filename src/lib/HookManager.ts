@@ -81,7 +81,7 @@ export class HookManager {
   }
 
   private newFn(pres: Set<HookFn>, posts: Set<HookFn>, orig: Function): () => void {
-    const value = function (this: any): void {
+    return function (this: any): void {
       try {
         for (const fn of pres) {
           fn(this);
@@ -93,8 +93,6 @@ export class HookManager {
         }
       }
     };
-
-    return value;
   }
 }
 

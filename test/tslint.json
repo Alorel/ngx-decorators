@@ -4,6 +4,7 @@
     "import-blacklist": false,
     "max-classes-per-file": false,
     "no-unused-expression": false,
-    "no-magic-numbers": false
+    "no-magic-numbers": false,
+    "no-identical-functions": false
   }
 }
