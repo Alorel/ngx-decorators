@@ -1,6 +1,6 @@
 {
   "name": "ngx-decorate",
-  "version": "3.0.2",
+  "version": "0.0.0",
   "description": "Useful decorators for Angular 2 and above",
   "main": "index.js",
   "browser": "_bundle/umd.js",
