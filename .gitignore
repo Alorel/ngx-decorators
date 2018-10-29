@@ -1,7 +1,11 @@
-/.idea/
-/node_modules/
-/dist/
-/.nyc_output/
-/coverage/
-*.tgz/git_gpg_keys.asc
+git_gpg_keys.asc
 /docs/
+.idea/
+node_modules/
+dist/
+coverage/
+.nyc_output/
+yarn-error.log
+*.tgz
+/.alobuild-tsconfig-*.json
+package-lock.json
