@@ -1,3 +1,16 @@
+## [3.0.3](https://github.com/Alorel/ngx-decorators.git/compare/3.0.2...3.0.3) (2018-10-29)
+
+
+### Maintenance
+
+* Add GitHub issue templates ([6e0176e](https://github.com/Alorel/ngx-decorators.git/commit/6e0176e))
+* Redistribute in proper flat ESM format ([c1a3ccc](https://github.com/Alorel/ngx-decorators.git/commit/c1a3ccc))
+
+
+### Refactoring
+
+* Refactored code for new tslint rules ([06e30b9](https://github.com/Alorel/ngx-decorators.git/commit/06e30b9))
+
 ## [3.0.2](https://github.com/Alorel/ngx-decorators/compare/3.0.1...3.0.2) (2018-10-02)
 
 
