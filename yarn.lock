@@ -4990,9 +4990,9 @@ typescript-lazy-get-decorator@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/typescript-lazy-get-decorator/-/typescript-lazy-get-decorator-1.2.2.tgz#f7ffe9f9225b830f851f2701376409cfd640100e"
 
-typescript-proto-decorator@~2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/typescript-proto-decorator/-/typescript-proto-decorator-2.0.2.tgz#10acb72087c4829d0c8258750ebc8198a53e9d9a"
+typescript-proto-decorator@~2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/typescript-proto-decorator/-/typescript-proto-decorator-2.1.0.tgz#287df62667d717d395995560cf17f0f705808777"
 
 typescript@3.1.x, "typescript@>=2.2.0 <4.0.0":
   version "3.1.3"
