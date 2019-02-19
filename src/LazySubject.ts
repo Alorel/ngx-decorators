@@ -17,7 +17,7 @@ export function LazySubject(): MethodDecorator {
     }
 
     desc.get = function () {
-      const value = orig.apply(this, arguments);
+      const value = orig.apply(this, <any>arguments);
 
       Object.defineProperty(this, key, {
         configurable: true,
