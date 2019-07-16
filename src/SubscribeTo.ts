@@ -5,6 +5,7 @@ import {_subscrTo} from './lib/symbols';
 import {subscribeTo} from './processors/subscribe-to';
 import {unsubscribe} from './processors/unsubscribe';
 
+/** Configuration object for {@link SubscribeTo} */
 export interface SubscribeToConfig {
   /** Property at which the change detector resides */
   cdrProp?: PropertyKey;

@@ -6,6 +6,7 @@ import {setProp} from './processors/setProp';
 import {ConfEnum} from './type/ConfEnum';
 import {MockSubject} from './type/Mocks';
 
+/** Configuration for {@link SubjectSetter} */
 export interface SubjectSetterConfig {
   /** Default value to set on the prototype */
   default?: any;
