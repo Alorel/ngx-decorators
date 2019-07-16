@@ -1,6 +1,7 @@
 import {ConfEnum} from './type/ConfEnum';
 import {MockCdr} from './type/Mocks';
 
+/** Configuration for {@link CdrProp} */
 export interface CdrPropConfig {
   /** Default value to set on the prototype */
   default?: any;

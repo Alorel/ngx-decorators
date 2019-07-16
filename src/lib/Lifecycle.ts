@@ -1,3 +1,5 @@
+//tslint:disable:completed-docs
+
 /** @internal */
 export const enum Lifecycle {
   PRE_INIT,
